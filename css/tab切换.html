@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+body,div,p,ul,li{padding:0;margin:0;}
+#main{width:1005px;background:#ccc;overflow:hidden;zoom:1;}
+ul li{float:left;list-style:none;}
+#title li{width:200px;height:30px;line-height:30px;text-align:center;font-size:14px;font-weight:bold;background:#C00;border-right:1px solid #FF0;cursor:default}
+#title .active{background:#9F0}
+
+
+#content{padding-top:20px;}
+#content p{padding-top:20px;}
+.hide{display:none;}
+</style>
+<script type="text/javascript">
+window.onload = function(){
+var oTitle = document.getElementById("title").children;
+var oContent = document.getElementById("content").children;
+for(var i = 0;i<oTitle.length;i++){
+oTitle[i].index = i;//增加一个自定义属性
+}
+for(var i = 0;i<oTitle.length;i++){
+oTitle[i].onmouseover = function(){
+for(var i=0;i<oTitle.length;i++){
+ 
+oTitle[i].className = "";
+oContent[i].style.display = "none";//先去掉className，display变为n“none”
+oTitle[this.index].className = "active";
+oContent[this.index].style.display = "block";
+}
+}
+}
+}
+
+</script>
+</head>
+
+
+<body>
+<div id="main">
+<div>
+    <ul id="title">
+     <li class="active">疯狂抢购</li>
+     <li>猜您喜欢</li>
+     <li>热卖商品</li>
+     <li>热评商品</li>
+     <li>新品上架</li>
+    </ul>
+    </div>
+    <div id="content">
+    <div class="hide" style="display:block">
+            <p>疯狂抢购疯狂抢购疯狂抢购疯狂抢购疯狂抢购疯狂抢购疯狂抢购疯狂抢购疯狂抢购疯狂抢购</p>
+            <p>疯狂抢购疯狂抢购疯狂抢购疯狂抢购疯狂抢购疯狂抢购疯狂抢购疯狂抢购疯狂抢购疯狂抢购</p>
+            <p>疯狂抢购疯狂抢购疯狂抢购疯狂抢购疯狂抢购疯狂抢购疯狂抢购疯狂抢购疯狂抢购疯狂抢购</p>
+            <p>疯狂抢购疯狂抢购疯狂抢购疯狂抢购疯狂抢购疯狂抢购疯狂抢购疯狂抢购疯狂抢购疯狂抢购</p>
+        </div>
+        <div class="hide">
+            <p>猜您喜欢猜您喜欢猜您喜欢猜您喜欢猜您喜欢猜您喜欢猜您喜欢猜您喜欢猜您喜欢猜您喜欢</p>
+            <p>猜您喜欢猜您喜欢猜您喜欢猜您喜欢猜您喜欢猜您喜欢猜您喜欢猜您喜欢猜您喜欢猜您喜欢</p>
+            <p>猜您喜欢猜您喜欢猜您喜欢猜您喜欢猜您喜欢猜您喜欢猜您喜欢猜您喜欢猜您喜欢猜您喜欢</p>
+            <p>猜您喜欢猜您喜欢猜您喜欢猜您喜欢猜您喜欢猜您喜欢猜您喜欢猜您喜欢猜您喜欢猜您喜欢</p>
+        </div>
+    <div class="hide">
+            <p>热卖商品热卖商品热卖商品热卖商品热卖商品热卖商品热卖商品热卖商品热卖商品热卖商品</p>
+            <p>热卖商品热卖商品热卖商品热卖商品热卖商品热卖商品热卖商品热卖商品热卖商品热卖商品</p>
+            <p>热卖商品热卖商品热卖商品热卖商品热卖商品热卖商品热卖商品热卖商品热卖商品热卖商品</p>
+            <p>热卖商品热卖商品热卖商品热卖商品热卖商品热卖商品热卖商品热卖商品热卖商品热卖商品</p>
+        </div>
+        <div class="hide">
+            <p>热评商品热评商品热评商品热评商品热评商品热评商品热评商品热评商品热评商品热评商品</p>
+            <p>热评商品热评商品热评商品热评商品热评商品热评商品热评商品热评商品热评商品热评商品</p>
+            <p>热评商品热评商品热评商品热评商品热评商品热评商品热评商品热评商品热评商品热评商品</p>
+            <p>热评商品热评商品热评商品热评商品热评商品热评商品热评商品热评商品热评商品热评商品</p>
+        </div>
+        <div class="hide">
+            <p>新品上架新品上架新品上架新品上架新品上架新品上架新品上架新品上架新品上架新品上架</p>
+            <p>新品上架新品上架新品上架新品上架新品上架新品上架新品上架新品上架新品上架新品上架</p>
+            <p>新品上架新品上架新品上架新品上架新品上架新品上架新品上架新品上架新品上架新品上架</p>
+            <p>新品上架新品上架新品上架新品上架新品上架新品上架新品上架新品上架新品上架新品上架</p>
+        </div>
+        
+    </div>
+</div>
+</body>
+</html>
